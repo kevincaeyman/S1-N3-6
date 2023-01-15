@@ -31,6 +31,8 @@
             margin-bottom: 100px;
             margin-top: 25px;
             color: #708090;
+            animation: moveLeft 1.5s ease-in;
+
         }
         .navbar :hover{
             transition: 0.8s;
@@ -44,7 +46,7 @@
         .logo {
             width: 50px;
             height: 50px;
-            
+            animation: moveLeft 1.5s ease-in;
         }
         .inicio {
             display: flex;
@@ -91,6 +93,8 @@
             padding-bottom: 50px;
             padding-left: 100px;
             padding-right: 100px;
+            animation: moveLeft 1.5s ease-in;
+
         }
     .main-content{
         display: flex;
@@ -100,6 +104,7 @@
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 5px;
+        animation: moveLeft 1.5s ease-in;
     }
     
         .articles{
@@ -167,6 +172,8 @@
                     color: white;
                     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                     font-size: larger;
+                    animation: moveLeft 1.5s ease-in;
+
                 }
                 .title-container :hover{
                     color:black;
@@ -252,5 +259,16 @@
 @media screen and (min-width:600px) and (orientation: portrait), screen and (min-width:801px) and (orientation: landscape){
     .container{
         flex-flow: column wrap;
+    }
+}
+
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
     }
 }
